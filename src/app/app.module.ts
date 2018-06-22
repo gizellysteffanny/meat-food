@@ -8,6 +8,7 @@ import { ROUTES } from './app.routing';
 
 import { RestaurantService } from './restaurants/restaurant.service';
 import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service';
+import { OrderService } from './order/order.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -53,7 +54,8 @@ import { OrderItemsComponent } from './order/order-items/order-items.component';
   ],
   providers: [
     RestaurantService, 
-    ShoppingCartService, 
+    ShoppingCartService,
+    OrderService,
     {provide: LOCALE_ID, useValue: 'pt-BR'}
   ],
   bootstrap: [AppComponent]
