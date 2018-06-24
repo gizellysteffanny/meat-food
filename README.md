@@ -39,17 +39,16 @@ Ou você pode copiar e colar esse código abaixo:
 
 `RewriteEngine On
 
-    # If an existing asset or directory is requested go to it as it is
+      # If an existing asset or directory is requested go to it as it is
     
-    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+      RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
     
-    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+      RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
     
-    RewriteRule ^ - [L]
+      RewriteRule ^ - [L]
     
-    # If the requested resource doesn't exist, use index.html
-    
-RewriteRule ^ /index.html`
+       # If the requested resource doesn't exist, use index.html
+    RewriteRule ^ /index.html`
 
 ## Upgrade para Angular 4.3
 
