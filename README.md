@@ -24,6 +24,29 @@
 
 `json-server db.json`
 
+## Gerando o build de Prod
+
+`ng build --prod --bh=/path/`
+
+*Caso use o servidor APACHE crie um arquivo `.htaccess` na raiz do projeto,
+ou se preferer adicione esse trecho de código no httpd.conf do apache.
+
+O trecho de código que precisa ser adicionado se encontra nesse link abaixo:
+[Angular | Deployment](https://angular.io/guide/deployment#routed-apps-must-fallback-to-indexhtml)
+Nele você encontra também outras configurações de outros servidores como *NGINX*
+
+Ou você pode copiar e colar esse código abaixo:
+`
+RewriteEngine On
+    # If an existing asset or directory is requested go to it as it is
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+    RewriteRule ^ - [L]
+    # If the requested resource doesn't exist, use index.html
+RewriteRule ^ /index.html
+
+`
+
 ## Upgrade para Angular 4.3
 
 Dependências dos pacotes que devem ficar em package.json:
