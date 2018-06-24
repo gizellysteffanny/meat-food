@@ -1,4 +1,4 @@
-# Meat - Angular App Starter
+# Meat Food
 
 ## 1. Passos para começar
 
@@ -23,18 +23,6 @@
 ### Iniciando o serviço (raiz da aplicação)
 
 `json-server db.json`
-
-## Goodies
-
-Expressões regulares usadas na validação de formulários
-
-### Email Regex
-
-`/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i`
-
-### Number Regex
-
-`/^[0-9]*$/`
 
 ## Upgrade para Angular 4.3
 
