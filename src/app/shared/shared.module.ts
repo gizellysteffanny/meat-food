@@ -6,8 +6,9 @@ import { InputComponent } from './input/input.component';
 import { RadioComponent } from './radio/radio.component';
 import { RatingComponent } from './rating/rating.component';
 
-import { ShoppingCartService } from '../restaurant-detail/shopping-cart/shopping-cart.service';
+import { NotificationService } from './messages/notification.service';
 import { RestaurantService } from '../restaurants/restaurant.service';
+import { ShoppingCartService } from '../restaurant-detail/shopping-cart/shopping-cart.service';
 import { OrderService } from '../order/order.service';
 import { SnackbarComponent } from './messages/snackbar/snackbar.component';
 
@@ -34,7 +35,7 @@ export class SharedModule {
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: SharedModule,
-            providers: [ShoppingCartService, RestaurantService, OrderService]
+            providers: [ShoppingCartService, RestaurantService, OrderService, NotificationService]
         };
     }
 }
