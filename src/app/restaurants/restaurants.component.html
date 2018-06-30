@@ -3,6 +3,9 @@
     Todos os Restaurantes
     <a (click)="toggleSearch()"
     class="search-link pull-right">
+      <span *ngIf="inputSearch.value" class="pr-10">
+        <small>"{{ inputSearch.value }}"</small>
+      </span>
       <i class="fa fa-search"></i>
     </a>
   </h1>
@@ -13,7 +16,7 @@
       <form [formGroup]="searchForm">
         <div class="form-group">
           <input type="text" class="form-control" 
-          formControlName="searchControl"
+          formControlName="searchControl" #inputSearch
           placeholder="O que você está procurando ?">
         </div>
       </form>
